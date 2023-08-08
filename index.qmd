@@ -1,0 +1,72 @@
+---
+title: " "
+---
+
+# **Ready for R! Workshop Series**
+
+Welcome to the Ready for R! Workshop Series organised by the Research Training Unit, Faculty of Medicine, Universiti Malaya, Malaysia
+
+## **What is this workshop?**
+
+This workshop lays the groundwork for addressing key practical aspects of programming and other essential computer skills needed for both research and implementation of statistical methods in three parts. In its first section, the workshop will introduce participants to programming in R and the tidyverse, guidance on coding best practices, and a primer on data wrangling. The second section will explore data visualization, as well as an exploration of both descriptive and inferential statistics using R. The final section of the workshop introduces the concept of regression analysis in R.
+
+## **Getting started**
+
+Have a look at the schedule below and download the necessary .qmd files for each session. While I have included solutions- it would be way more beneficial to attempt these yourself first. Lets try to maximise learning in the three sessions.
+
+If you are new to R, don't worry - start off with this [deck](http://vivekjason.com/StatsComputingR_sbdr2023/installation.html#/title-slide) to learn how to install the software and familiarise yourself with the environment.
+
+## Schedule and Materials
+
+### Section 1: An Introduction to R
+
+![](images/intro.png)
+
+| Date               | Time                | Topic               |
+|:-------------------|:--------------------|:--------------------|
+| 18.8.2023 (Friday) | 8.00 am - 8.30 am   | Introduction to R   |
+|                    | 8.30 am - 9.30 am   | Taking the Wheel #1 |
+|                    | 9.30 am - 10.00 am  | Break               |
+|                    | 10.00 am - 10.45 am | Basics of Tidyverse |
+|                    | 10.45 am - 12.15 pm | Taking the Wheel #2 |
+|                    | 12.15 pm - 12.30 pm | Q&A                 |
+
+### Section 2: Descriptive Statistics in R
+
+![](images/descriptive.png)
+
+| Date                 | Time                      | Topic                       |
+|:----------------|:----------------|:-------------------------------------|
+| 29.08.2023 (Tuesday) | 8.00 am - 8.30 am         | Descriptive Statistics in R |
+|                      | 8.30 am - 9.30 am         | Taking the Wheel #1         |
+|                      | 9.30 am - 10.00 am        | Break                       |
+|                      | 10.00 am - 10.45 am       | Basics of ggplot2           |
+|                      | 10.45 am - 12.15 pm       | Taking the Wheel #2         |
+|                      | 12.15 pm - 1.00p pm       | Q&A                         |
+
+### Section 3: Inferential Statistics in R
+
+| Date                  | Time                     | Topic                               |
+|:----------------|:----------------|:-------------------------------------|
+| 14.09.2023 (Thursday) | 8.00 am - 8.30 am        | Inferential Statistics in R         |
+|                       | 8.30 am - 9.30 am        | Taking the Wheel #1                 |
+|                       | 9.30 am - 10.00 am       | Break                               |
+|                       | 10.00 am - 10.45 am      | Introduction to Regression Analysis |
+|                       | 10.45 am - 12.15 pm      | Taking the Wheel #2                 |
+|                       | 12.15 pm - 1.00 pm       | Q&A                                 |
+
+## Speaker
+
+![](images/1688354405314.png){fig-align="left" width="2in"}
+
+**Vivek Jason**
+
+Jason is a gazetting Public Health Physician passionate about epidemiology, infectious diseases and data science. He spends his time between coding, parenting a toddler and pondering the fate of the universe.
+
+## **Acknowledgements**
+
+This course was developed and is maintained by [Vivek Jason](https://github.com/vivekjason).
+
+The following individuals have contributed to improving the course or materials have been adapted from their courses: [R for Applied Epidemiology and Public Health](https://epirhandbook.com/en/), [Stephanie Hicks](https://www.stephaniehicks.com/), [Roger D. Peng](https://github.com/rdpeng), [Naim Rashid](https://naimurashid.github.io/).
+
+The course materials are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Linked and embedded materials are governed by their own licenses. I assume that all external materials used or embedded here are covered under the educational fair use policy. If this is not the case and any material displayed here violates copyright, please let me know and I will remove it.

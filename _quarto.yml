@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: " "
+  description: "Workshop website for Ready for R! (RTU, FOM, UM 2023)"
+  navbar:
+    right:
+      - text: "Home"
+        file: index.qmd
+      - text: "Introduction"
+        menu:
+        - text: "Introduction"
+          href: introduction.qmd
+        - text: "Introduction- Tutorial"
+          href: introduction_tutorial.qmd
+        - text: "Data Wranggling"
+          href: data_wranggling.qmd
+        - text: "Data Wranggling- Tutorial"
+          href: data_wranggling_tutorial.qmd
+      - text: "Descriptive Statistics"
+        menu: 
+        - text: "Descriptive Statistics"
+          href: descriptives.qmd
+        - text: "Descriptive Statistics- Tutorial"
+          href: descriptives_tutorial.qmd
+        - text: "Data Visualisation"
+          href: data_viz.qmd
+        - text: "Data Visualisation- Tutorial"
+          href: data_viz_tutorial.qmd
+      - text: "Inferential Statistics"
+        menu: 
+        - text: "Inferential Statistics"
+          href: inferential_stats.qmd
+        - text: "Inferential Statistics- Tutorial"
+          href: inferential_stats_tutorial.qmd
+        - text: "Regression"
+          href: regression.qmd
+        - text: "Regression- Tutorial"
+          href: regression_tutorial.qmd
+      - icon: github
+        href: https://github.com/vivekjason
+      - icon: twitter
+        href: https://twitter.com/vivekjason87
+      - icon: rss
+        href: index.xml
+    
+format:
+  html:
+    theme: simplex
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-summary: "Show the solution"
+
+editor: visual
+

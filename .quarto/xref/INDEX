@@ -1,0 +1,20 @@
+{
+  "index.qmd": {
+    "index.html": "3bb22b42"
+  },
+  "about.qmd": {
+    "about.html": "736e59d2"
+  },
+  "introduction.qmd": {
+    "introduction.html": "cc134707"
+  },
+  "introduction_tutorial.qmd": {
+    "introduction_tutorial.html": "8d9f65ab"
+  },
+  "session1_introduction.qmd": {
+    "session1_introduction.html": "e96843c2"
+  },
+  "session2_wranggling.qmd": {
+    "session2_wranggling.html": "83df6ae9"
+  }
+}

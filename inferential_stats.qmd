@@ -1,0 +1,208 @@
+---
+title: "Inferential Statistics"
+author: "Vivek Jason"
+format: 
+  html:
+    theme: simplex
+    toc: true
+    toc_float: true
+editor: visual
+---
+
+Inferential statistics form the bedrock of any complex analysis. Inferential statistics allow for conclusions or predictions about a larger population from the sampled data, providing the necessary basis for hypothesis testing. They provide an initial understanding of data, and an informed context for the application of more complex statistical or machine learning techniques.
+
+![](/images/uncertainty.jpg){fig-align="center"}
+
+As we mentioned in the Introduction- there are many ways to skin a cat in R.
+
+### `rstatix()` for inferential statistics
+
+![](/images/inferential-stats.png){fig-align="center"}
+
+Inferential statistics is a set of statistical procedures that allows us to draw conclusions about an entire population from a representative sample. The importance of inferential statistics lies in its ability to:
+
+1.  Generalize about a population: Inferential statistics enables researchers to make predictions or inferences about a population based on the observations made in a sample.
+
+2.  Test hypotheses: With inferential statistics, researchers can test a hypothesis to determine its statistical significance.
+
+3.  Study relationships: It allows researchers to examine the relationships between different variables in a sample and to generalize these relationships to the broader population.
+
+We will not focus on the mathematics behind inferential statistics but more so the impementation within R. Nontheless, here is a quick summary of commonly used inferential statistical tests and when they are used:
+
+1.  **T-tests (One-sample, Independent Two-sample, and Paired):** These are used when we want to compare the means of one or two groups. For example, comparing the average height of men and women.
+
+2.  **Analysis of Variance (ANOVA):** ANOVA is used when comparing the means of more than two groups. For example, comparing the average income of people in three different cities.
+
+3.  **Chi-square test:** The chi-square test is used to determine if there is a significant association between two categorical variables. For example, examining the relationship between gender and voting behavior.
+
+4.  **Correlation and Regression:** Correlation is used to measure the strength and direction of the linear relationship between two variables. Regression is used to predict the value of one variable based on the value of another.
+
+Each test has assumptions that need to be satisfied for the results to be accurate, so it's essential to choose the right test for the data and research question at hand.
+
+While it is possible to run these tests in `base()` R, we will skip that in this course since our grounding has all been carried out within the `tidyverse()`. If you wish to study inferential statistics using base () R you can have a look at [this](https://ladal.edu.au/basicstatz.html#2_Selected_Parametric_tests).
+
+For the purposes of this course we shall take a deeper look at the rstatix package:
+
+#### **T-test**
+
+Use a formula syntax to specify the numeric and categorical columns for a two sample t-test:
+
+```{r}
+c19_df %>% 
+  t_test(age ~ male)
+```
+
+Or a one-sample t-test
+
+```{r}
+c19_df %>% 
+  t_test(age ~ 1, mu = 60)
+```
+
+Or one sample t-tests by group
+
+```{r}
+c19_df %>% 
+  group_by(male) %>% 
+  t_test(age ~ 1, mu = 60)
+```
+
+#### Shapiro-Wilk test
+
+Note: Sample size must be between 3-5000
+
+```{r}
+c19_df %>% 
+  head(500) %>%            # first 500 rows of case linelist, for example only
+  shapiro_test(age)
+```
+
+#### **Wilcoxon rank sum test**
+
+```{r}
+c19_df %>% 
+  wilcox_test(age ~ malaysian)
+```
+
+#### **Kruskal-Wallis test**
+
+Also known as the Mann-Whitney U test.
+
+```{r}
+c19_df %>% 
+  kruskal_test(age ~ state)
+```
+
+#### **Chi-squared test**
+
+The chi-square test function accepts a table, so first we create a cross-tabulation. There are many ways to create a cross-tabulation but here we use `tabyl()` from **janitor** and remove the left-most column of value labels before passing to `chisq_test()`.
+
+```{r}
+c19_df %>% 
+  tabyl(malaysian, bid) %>% 
+  select(-1) %>% 
+  chisq_test()
+```
+
+### **`gtsummary()` package for Inferential statistics**
+
+![](/images/bombing_data.png)
+
+Use **gtsummary** if you are looking to add the results of a statistical test to a pretty table that was created with this package. Performing statistical tests of comparison with `tbl_summary` is done by adding the `add_p` function to a table and specifying which test to use. It is possible to get p-values corrected for multiple testing by using the `add_q` function. Run `?tbl_summary` for details.
+
+![](/images/excited.gif){fig-align="center"}
+
+#### **T-tests**
+
+Compare the difference in means for a continuous variable in two groups. For example, compare the mean age by patient outcome.
+
+```{r}
+c19_df %>% 
+  select(age, malaysian) %>%                 # keep variables of interest
+  tbl_summary(                               # produce summary table
+    statistic = age ~ "{mean} ({sd})",       # specify what statistics to show
+    by = malaysian) %>%                      # specify the grouping variable
+  add_p(age ~ "t.test")                      # specify what tests to perform
+```
+
+#### **Wilcoxon rank sum test**
+
+Compare the distribution of a continuous variable in two groups. The default is to use the Wilcoxon rank sum test and the median (IQR) when comparing two groups. However for non-normally distributed data or comparing multiple groups, the Kruskal-wallis test is more appropriate.
+
+```{r}
+c19_df %>% 
+  select(age, malaysian) %>%                     # keep variables of interest
+  tbl_summary(                                   # produce summary table
+    statistic = age ~ "{median} ({p25}, {p75})", # specify what statistic to show (this is default so could remove)
+    by = malaysian) %>%                          # specify the grouping variable
+  add_p(age ~ "wilcox.test")                     # specify what test to perform (default so could leave brackets empty)
+```
+
+#### **Kruskal-wallis test**
+
+Compare the distribution of a continuous variable in two or more groups, regardless of whether the data is normally distributed.
+
+```{r}
+c19_df %>% 
+  select(age, state) %>%                         # keep variables of interest
+  tbl_summary(                                   # produce summary table
+    statistic = age ~ "{median} ({p25}, {p75})", # specify what statistic to show (default, so could remove)
+    by = state) %>%                              # specify the grouping variable
+  add_p(age ~ "kruskal.test")                    # specify what test to perform
+```
+
+#### **Chi-squared test**
+
+Compare the proportions of a categorical variable in two groups. The default statistical test for `add_p()` when applied to a categorical variable is to perform a chi-squared test of independence with continuity correction, but if any expected call count is below 5 then a Fisher's exact test is used.
+
+```{r}
+c19_df %>% 
+  select(malaysian, bid) %>% # keep variables of interest
+  tbl_summary(by = bid) %>%  # produce summary table and specify grouping variable
+  add_p()                    # specify what test to perform
+```
+
+![](/images/p-value.png){fig-align="center"}
+
+### Correlations in R
+
+Correlation between numeric variables can be investigated using the **tidyverse**\
+**corrr** package. It allows you to compute correlations using Pearson, Kendall tau or Spearman rho. The package creates a table and also has a function to automatically plot the values.
+
+```{r}
+correlation_tab <- c19_df %>%
+  mutate(across(contains("date"), ~as.Date(., format = "%Y-%m-%d")), #change character to dates\ fromat
+         days_delay=as.numeric(date_announced-date),
+         days_admitted=as.numeric(date-date_positive)) %>%
+  select(age, days_delay, days_admitted) %>%                         # keep only columns of interest
+  correlate()                                        # create correlation table (using default pearson)
+
+correlation_tab                                                      # print
+```
+
+Plot a scatteplot of correlations
+
+```{r}
+## plot correlations 
+rplot(correlation_tab)
+```
+
+Finally you can create a nifty little heatmap. You can calculate a correlation data frame using the correlate() function from corrr, reshape it into a long format with melt(), and then create a heatmap with ggplot2:
+
+```{r}
+correlation_tab %>% autoplot(triangular="full") +
+  geom_text(aes(label=round(r, digits=2)), size=4)+
+  theme_minimal(16)
+```
+
+### Acknowledgements
+
+Material for this lecture was borrowed and adopted from
+
+-   [The Epidemiologist R Handbook](https://epirhandbook.com/en/index.html)
+
+-   <https://rafalab.github.io/dsbook>
+
+![](/images/images.jpeg)
+
+### 
