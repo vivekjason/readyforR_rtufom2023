@@ -1,6 +1,0 @@
----
-title: "Introduction"
-author: "Vivek Jason"
-format: revealjs
-editor: visual
----
