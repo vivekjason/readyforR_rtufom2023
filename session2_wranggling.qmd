@@ -1,0 +1,6 @@
+---
+title: "Data Wranggling with Tidyverse"
+author: "Vivek Jason"
+format: revealjs
+editor: visual
+---

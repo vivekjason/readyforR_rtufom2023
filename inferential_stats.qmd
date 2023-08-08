@@ -13,7 +13,34 @@ Inferential statistics form the bedrock of any complex analysis. Inferential sta
 
 ![](/images/uncertainty.jpg){fig-align="center"}
 
+Lets get some important packages loaded
+
+```{r, results=FALSE, warning=FALSE}
+required_packages <- c("tidyverse", "lubridate", "gtsummary", "rstatix", "janitor", "corrr")
+not_installed <- required_packages[!(required_packages %in% installed.packages()[ , "Package"])]    
+if(length(not_installed)) install.packages(not_installed)                                           
+suppressWarnings(lapply(required_packages, require, character.only = TRUE))
+
+```
+
 As we mentioned in the Introduction- there are many ways to skin a cat in R.
+
+#### Importing some data
+
+Lets call in the data:
+
+```{r}
+c19_df <- read.csv("https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/linelist/linelist_deaths.csv")
+```
+
+Just to be consistent we what I said yesterday- before diving into the data always always skim the data first to get a quick feels
+
+```{r}
+c19_df %>% 
+  skimr::skim()
+```
+
+#### 
 
 ### `rstatix()` for inferential statistics
 

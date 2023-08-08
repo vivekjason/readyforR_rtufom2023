@@ -16,5 +16,35 @@
   },
   "session2_wranggling.qmd": {
     "session2_wranggling.html": "83df6ae9"
+  },
+  "data_viz.qmd": {
+    "data_viz.html": "f3c297f5"
+  },
+  "data_viz_tutorial.qmd": {
+    "data_viz_tutorial.html": "739a6d89"
+  },
+  "data_wranggling.qmd": {
+    "data_wranggling.html": "18903957"
+  },
+  "data_wranggling_tutorial.qmd": {
+    "data_wranggling_tutorial.html": "e0d9cb80"
+  },
+  "descriptives.qmd": {
+    "descriptives.html": "079711b4"
+  },
+  "descriptives_tutorial.qmd": {
+    "descriptives_tutorial.html": "7dd7f2c4"
+  },
+  "inferential_stats.qmd": {
+    "inferential_stats.html": "4229bf0f"
+  },
+  "inferential_stats_tutorial.qmd": {
+    "inferential_stats_tutorial.html": "c62f0d69"
+  },
+  "regression.qmd": {
+    "regression.html": "784ace24"
+  },
+  "regression_tutorial.qmd": {
+    "regression_tutorial.html": "b41a01ba"
   }
 }
