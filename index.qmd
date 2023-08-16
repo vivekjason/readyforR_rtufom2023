@@ -22,38 +22,40 @@ If you are new to R, don't worry - start off with this [deck](http://vivekjason.
 
 ![](images/intro.png)
 
-| Date               | Time                | Topic               |
-|:-------------------|:--------------------|:--------------------|
-| 18.8.2023 (Friday) | 8.00 am - 8.30 am   | Introduction to R   |
-|                    | 8.30 am - 9.30 am   | Taking the Wheel #1 |
-|                    | 9.30 am - 10.00 am  | Break               |
-|                    | 10.00 am - 10.45 am | Basics of Tidyverse |
-|                    | 10.45 am - 12.15 pm | Taking the Wheel #2 |
-|                    | 12.15 pm - 12.30 pm | Q&A                 |
+| Date               | Time                | Topic                                                                                                                                                                                                      |
+|:-------------------|:--------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 18.8.2023 (Friday) | 8.00 am - 8.30 am   | [I](https://github.com/vivekjason/readyforR_rtufom2023/blob/main/introduction.qmd)[ntroduction to R](https://github.com/vivekjason/readyforR_rtufom2023/blob/main/introduction.qmd "Introduction Content") |
+|                    | 8.30 am - 9.30 am   | [Taking the Wheel #1](https://github.com/vivekjason/readyforR_rtufom2023/blob/main/introduction_tutorial.qmd "Introduction Tutorial")                                                                      |
+|                    | 9.30 am - 10.00 am  | Break                                                                                                                                                                                                      |
+|                    | 10.00 am - 10.45 am | [Basics of Tidyverse](https://github.com/vivekjason/readyforR_rtufom2023/blob/main/data_wranggling.qmd "Data Wranggling Content")                                                                          |
+|                    | 10.45 am - 12.15 pm | [Taking the Wheel #2](https://github.com/vivekjason/readyforR_rtufom2023/blob/main/data_wranggling_tutorial.qmd "Data Wranggling Tutorial")                                                                |
+|                    | 12.15 pm - 12.30 pm | Q&A                                                                                                                                                                                                        |
 
-### Section 2: Descriptive Statistics in R
+### Section 2: Descriptive Statistics in R 
 
-![](images/descriptive.png)
+![](images/coming_soon3.jpg){fig-align="center"}
 
-| Date                 | Time                | Topic                       |
+| ~~Date~~                 | ~~Time~~                | ~~Topic~~                       |
 |:---------------------|:--------------------|:----------------------------|
-| 29.08.2023 (Tuesday) | 8.00 am - 8.30 am   | Descriptive Statistics in R |
-|                      | 8.30 am - 9.30 am   | Taking the Wheel #1         |
-|                      | 9.30 am - 10.00 am  | Break                       |
-|                      | 10.00 am - 10.45 am | Basics of ggplot2           |
-|                      | 10.45 am - 12.15 pm | Taking the Wheel #2         |
-|                      | 12.15 pm - 1.00p pm | Q&A                         |
+| ~~29.08.2023 (Tuesday)~~ | ~~8.00 am - 8.30 am~~   | ~~Descriptive Statistics in R~~ |
+|                          | ~~8.30 am - 9.30 am~~   | ~~Taking the Wheel #1~~         |
+|                          | ~~9.30 am - 10.00 am~~  | ~~Break~~                       |
+|                          | ~~10.00 am - 10.45 am~~ | ~~Basics of ggplot2~~           |
+|                          | ~~10.45 am - 12.15 pm~~ | ~~Taking the Wheel #2~~         |
+|                          | ~~12.15 pm - 1.00p pm~~ | ~~Q&A~~                         |
 
-### Section 3: Inferential Statistics in R
+### Section 3: Inferential Statistics in R 
 
-| Date                  | Time                | Topic                               |
-|:----------------------|:--------------------|:------------------------------------|
-| 14.09.2023 (Thursday) | 8.00 am - 8.30 am   | Inferential Statistics in R         |
-|                       | 8.30 am - 9.30 am   | Taking the Wheel #1                 |
-|                       | 9.30 am - 10.00 am  | Break                               |
-|                       | 10.00 am - 10.45 am | Introduction to Regression Analysis |
-|                       | 10.45 am - 12.15 pm | Taking the Wheel #2                 |
-|                       | 12.15 pm - 1.00 pm  | Q&A                                 |
+![](images/coming_soon3.jpg){fig-align="center"}
+
+| ~~Date~~                  | ~~Time~~                | ~~Topic~~                               |
+|:--------------------|:------------------|:-------------------------------|
+| ~~14.09.2023 (Thursday)~~ | ~~8.00 am - 8.30 am~~   | ~~Inferential Statistics in R~~         |
+|                           | ~~8.30 am - 9.30 am~~   | ~~Taking the Wheel #1~~                 |
+|                           | ~~9.30 am - 10.00 am~~  | ~~Break~~                               |
+|                           | ~~10.00 am - 10.45 am~~ | ~~Introduction to Regression Analysis~~ |
+|                           | ~~10.45 am - 12.15 pm~~ | ~~Taking the Wheel #2~~                 |
+|                           | ~~12.15 pm - 1.00 pm~~  | ~~Q&A~~                                 |
 
 ## Speaker
 
