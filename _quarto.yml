@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: " "
+  title: ""
   description: "Workshop website for Ready for R! (RTU, FOM, UM 2023)"
   navbar:
     right:

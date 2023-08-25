@@ -78,4 +78,4 @@ df_subset <- c19_df %>%
   tbl_summary(by = malaysian)
 ```
 
-### 
+### ![](images/dc54a8db-85df-411b-b180-53f8500239be.jpg)

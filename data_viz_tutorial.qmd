@@ -169,3 +169,5 @@ ggsave("line_plot.pdf", line_plot, dpi=300)
 ggsave("boxplot_plot.svg", boxplot_plot, unit="px", height=1080, width = 1920)
 ggsave("bar_plot.eps", bar_plot, unit="in", height=3.25, width = 3.25)
 ```
+
+![](images/dc54a8db-85df-411b-b180-53f8500239be.jpg){fig-align="center"}
