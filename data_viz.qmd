@@ -9,7 +9,7 @@ format:
 editor: visual
 ---
 
-### A word to the wise 
+### A word to the wise
 
 ```{r, include=FALSE}
 library(datasauRus)
@@ -600,7 +600,7 @@ Adjust each tiny aspect of the plot individually within [`theme()`](https://ggpl
 Here are some especially common [`theme()`](https://ggplot2.tidyverse.org/reference/theme.html) arguments. You will recognize some patterns, such as appending `.x` or `.y` to apply the change only to one axis.
 
 | [`theme()`](https://ggplot2.tidyverse.org/reference/theme.html) argument | What it adjusts                                                 |
-|--------------------------------------|----------------------------------|
+|--------------------------------------------------------------------------|-----------------------------------------------------------------|
 | `plot.title = element_text()`                                            | The title                                                       |
 | `plot.subtitle = element_text()`                                         | The subtitle                                                    |
 | `plot.caption = element_text()`                                          | The caption (family, face, color, size, angle, vjust, hjust...) |
